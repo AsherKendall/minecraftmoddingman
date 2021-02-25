@@ -1,6 +1,7 @@
 package cubicoder.tutorialmod.client;
 
 import cubicoder.tutorialmod.TutorialMod;
+import cubicoder.tutorialmod.init.ModBlocks;
 import cubicoder.tutorialmod.init.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -16,6 +17,8 @@ public class ModelRegistrationHandler {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
         registerModel(ModItems.FIRST_ITEM, 0);
+        registerModel(Item.getItemFromBlock(ModBlocks.FIRST_BLOCK), 0);
+
     }
 
     private static void registerModel(Item item, int meta) {
