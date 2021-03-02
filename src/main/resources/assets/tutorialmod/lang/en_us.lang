@@ -1,4 +1,7 @@
+#Creative Tabs
+itemGroup.tutorialmod=Tutorial Mod
 #Items
 item.tutorialmod.first_item.name=Penis Sword
+item.tutorialmod.tutorial_pickaxe.name=Tutorial Pickaxe
 #Blocks
 tile.tutorialmod.first_block.name=Penis Block

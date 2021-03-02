@@ -1,5 +1,6 @@
 package cubicoder.tutorialmod;
 
+import net.minecraft.creativetab.CreativeTabs;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -16,6 +17,8 @@ public class TutorialMod {
     public static final String NAME = "Tutorial Mod";
     public static final String VERSION = "0.0.1";
     public static final String MC_VERSION = "[1.12.2]";
+    public static final CreativeTabs TUTORIAL_TAB = new TutorialModTab();
+
 
     public static final Logger LOGGER = LogManager.getLogger(TutorialMod.MODID);
 

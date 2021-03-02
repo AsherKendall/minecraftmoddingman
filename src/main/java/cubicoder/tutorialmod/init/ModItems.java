@@ -8,5 +8,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 public class ModItems {
 
     public static final Item FIRST_ITEM = null;
+    public static final Item TUTORIAL_PICKAXE  = null;
 
 }
