@@ -1,4 +1,4 @@
-package cubicoder.tutorialmod.mobs;
+package cubicoder.tutorialmod.entity;
 
 
 import cubicoder.tutorialmod.TutorialMod;
@@ -24,9 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 
 public class gamerzombie extends EntityMob {
-
     private static final DataParameter<Boolean> ARMS_RAISED = EntityDataManager.createKey(gamerzombie.class, DataSerializer.BOOLEAN);
-
     public static final ResourceLocation LOOT = new ResourceLocation(TutorialMod.MODID, "entities/gamer_zombie");
 
     public gamerzombie(World worldIn){
@@ -50,12 +48,12 @@ public class gamerzombie extends EntityMob {
         this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(3.0D);
     }
 
-    public void setArmsRaised(boolean armsRaised){
+    public void setArmsRaised(boolean armsRaised) {
         this.getDataManager().set(ARMS_RAISED, Boolean.valueOf(armsRaised));
     }
 
     @SideOnly(Side.CLIENT)
-    public boolean isArmsRaised(){
+    public boolean isArmsRaised() {
         return this.getDataManager().get(ARMS_RAISED).booleanValue();
     }
 

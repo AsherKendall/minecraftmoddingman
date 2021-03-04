@@ -1,6 +1,7 @@
 package cubicoder.tutorialmod;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fml.common.SidedProxy;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -18,9 +19,10 @@ public class TutorialMod {
     public static final String VERSION = "0.0.1";
     public static final String MC_VERSION = "[1.12.2]";
     public static final CreativeTabs TUTORIAL_TAB = new TutorialModTab();
-
-
+    public static final int gamerzombie = 120;
     public static final Logger LOGGER = LogManager.getLogger(TutorialMod.MODID);
+    @Mod.Instance
+    public static TutorialMod instance;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -28,6 +30,7 @@ public class TutorialMod {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
+
         LOGGER.info(TutorialMod.NAME + " says hi!");
     }
 

@@ -6,7 +6,7 @@ import cubicoder.tutorialmod.materials.TutorialMaterials;
 import cubicoder.tutorialmod.util.RegistryUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.block.Block;
@@ -15,6 +15,7 @@ import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
+
 
 @EventBusSubscriber(value = Side.CLIENT, modid = TutorialMod.MODID)
 public class RegistrationHandler {
@@ -40,7 +41,9 @@ public class RegistrationHandler {
         };
 
         event.getRegistry().registerAll(blocks);
+
     }
+
     private static void registerModel(Item item, int meta) {
         ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
